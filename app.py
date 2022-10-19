@@ -71,7 +71,8 @@ def dashboard(name):
     
 @app.route('/logout')
 def logout():
-    session.pop('user_id')
+    session.pop('user_id') #when user clicks on logout bbutton, remove the user_id key from the session dictionary
+    # and take to homepage
     return redirect(url_for('registration'))
 
 if __name__=='__main__':
